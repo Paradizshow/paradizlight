@@ -20,82 +20,139 @@
       flex-direction: column;
     }
     header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem 2rem;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
       background: linear-gradient(90deg, #7b42f6, #b01eff);
       box-shadow: 0 2px 8px rgba(183, 30, 255, 0.5);
       color: white;
-      flex-wrap: wrap;
-      text-align: center;
     }
     header img {
-      height: 60px;
-      margin-right: 1rem;
-      filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
+      height: 70px;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9));
     }
     header h1 {
-      font-size: 2rem;
-      margin: 0;
+      font-size: 2.2rem;
+      margin: 1rem 0 0.5rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
     }
     header p {
-      width: 100%;
-      text-align: center;
-      margin-top: 0.5rem;
-      color: #fff;
-      font-size: 1.1rem;
+      margin: 0.3rem 0;
+      font-size: 1.2rem;
     }
-    section {
-      max-width: 900px;
+    header .slogan {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 0.8rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
       margin: 2rem auto;
-      padding: 1rem 2rem;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(123, 66, 246, 0.15);
+      padding: 1rem;
+      gap: 2rem;
     }
+
+    .left-column {
+      flex: 1 1 260px;
+      background: #f4f0ff;
+      border: 1px solid #b01eff33;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: left;
+      min-width: 250px;
+    }
+
+    .left-column h3 {
+      color: #7b42f6;
+    }
+
+    .right-column {
+      flex: 3 1 600px;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 25px rgba(123, 66, 246, 0.12);
+    }
+
     h2, h3 {
       color: #7b42f6;
       margin-top: 1.5rem;
-      text-shadow: 0 0 5px #b01eff44;
     }
+
     p, ul {
       font-size: 1rem;
       color: #2c2c54;
     }
+
     ul {
       padding-left: 1.5rem;
       list-style-type: square;
     }
+
     a {
       color: #b01eff;
       text-decoration: none;
-      word-break: break-word;
       font-weight: 600;
-      transition: color 0.3s ease;
+      word-break: break-word;
     }
+
     a:hover {
       color: #7b42f6;
       text-decoration: underline;
     }
+
     .button {
       display: inline-block;
       background: linear-gradient(90deg, #b01eff, #7b42f6);
       color: white;
-      padding: 0.8rem 1.8rem;
+      padding: 0.7rem 1.4rem;
       margin-top: 1rem;
       border-radius: 50px;
       font-weight: 700;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(183, 30, 255, 0.4);
-      transition: background 0.4s ease;
+      box-shadow: 0 4px 12px rgba(183, 30, 255, 0.3);
+      transition: background 0.3s ease;
     }
+
     .button:hover {
       background: linear-gradient(90deg, #7b42f6, #b01eff);
     }
+
+    .copy-box {
+      background: #fff;
+      border: 1px solid #b01eff;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #7b42f6;
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 8px;
+      position: absolute;
+      left: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+      font-size: 0.85rem;
+      z-index: 1;
+    }
+
+    .copy-box:hover .tooltip {
+      visibility: visible;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -105,20 +162,13 @@
       background: #fafafa;
       box-shadow: inset 0 1px 0 #ddd;
     }
-    @media (max-width: 600px) {
-      header {
+
+    @media (max-width: 768px) {
+      .container {
         flex-direction: column;
-        gap: 0.7rem;
       }
-      header img {
-        margin: 0;
-      }
-      header h1 {
-        font-size: 1.6rem;
-      }
-      section {
-        margin: 1rem;
-        padding: 1rem 1.2rem;
+      .right-column {
+        padding: 1rem;
       }
     }
   </style>
@@ -128,114 +178,67 @@
   <header>
     <img src="logo.png" alt="PARADIZlight Logo" />
     <h1>PARADIZlight (PLZ)</h1>
-    <p>Native utility token for real-world needs. <em>We think about you.</em></p>
+    <p>Native utility token for real-world needs.</p>
+    <p class="slogan">We think about you.</p>
   </header>
 
-  <section id="tokenomics">
-    <h2>📊 Tokenomics</h2>
-
-    <p><strong>Total Supply:</strong> 100,000,000 PLZ<br />
-    <strong>Decimals:</strong> 5<br />
-    <strong>Network:</strong> Polygon (PoS)</p>
-
-    <h3>🔒 Locked Supply: 35%</h3>
-    <p>
-      35% of the total supply will be locked for long-term development and sustainability. Tokens will be unlocked gradually based on a defined vesting schedule.
-    </p>
-
-    <h3>💧 Uniswap Launch: 65%</h3>
-    <p>
-      65% of tokens will be added to Uniswap at launch at a price of <strong>$0.005</strong> per PLZ.
-    </p>
-
-    <h3>🔥 Deflationary Mechanics</h3>
-    <ul>
-      <li>5% of each transaction is sent to a burn wallet.</li>
-      <li>This wallet is regularly burned to reduce supply.</li>
-      <li>Every 6 months, 10% of liquidity pool tokens are burned.</li>
-    </ul>
-
-    <h3>📈 Long-Term Supply Reduction</h3>
-    <p>
-      After the first year, 10% of circulating liquidity will be burned.<br />
-      This continues every 6 months, driving scarcity and increasing value.
-    </p>
-
-    <h3>⚙️ Smart Contract</h3>
-    <div style="margin-top: 0.5rem; position: relative;">
-      <span
-        id="copyContract"
-        onclick="copyToClipboard()"
-        title="Click to copy"
-        style="
-          display: inline-block;
-          background: #f2f0ff;
-          padding: 0.6rem 1rem;
-          border-radius: 8px;
-          border: 1px solid #b01eff;
-          color: #7b42f6;
-          font-weight: bold;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        "
-      >
+  <div class="container">
+    <div class="left-column">
+      <h3>Smart Contract</h3>
+      <div class="copy-box" onclick="copyToClipboard()" title="Click to copy">
         Smart Contract
-      </span>
-      <span
-        id="tooltip"
-        style="
-          visibility: hidden;
-          background-color: #555;
-          color: #fff;
-          text-align: center;
-          border-radius: 6px;
-          padding: 0.5rem;
-          position: absolute;
-          z-index: 1;
-          left: 110%;
-          top: 50%;
-          transform: translateY(-50%);
-          white-space: nowrap;
-          font-size: 0.85rem;
-        "
+        <span class="tooltip" id="tooltip">0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0</span>
+      </div>
+
+      <a
+        class="button"
+        href="https://app.uniswap.org/#/swap?outputCurrency=0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0&chain=polygon"
+        target="_blank"
       >
-        0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0
-      </span>
+        Buy on Uniswap
+      </a>
     </div>
 
-    <a
-      class="button"
-      href="https://app.uniswap.org/#/swap?outputCurrency=0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0&chain=polygon"
-      target="_blank"
-      style="margin-top: 1.2rem; display: inline-block;"
-    >
-      Buy on Uniswap
-    </a>
+    <div class="right-column">
+      <h2>📊 Tokenomics</h2>
+      <p><strong>Total Supply:</strong> 100,000,000 PLZ<br />
+         <strong>Decimals:</strong> 5<br />
+         <strong>Network:</strong> Polygon (PoS)</p>
 
-    <p style="margin-top: 2rem; font-style: italic; color: #555;">
-      PARADIZlight is designed as a truly deflationary digital asset with smart economics and long-term growth vision.
-    </p>
-  </section>
+      <h3>🔒 Locked Supply: 35%</h3>
+      <p>
+        35% of the total supply will be locked for long-term development and sustainability. Tokens will be unlocked gradually based on a defined vesting schedule.
+      </p>
+
+      <h3>💧 Uniswap Launch: 65%</h3>
+      <p>
+        65% of tokens will be added to Uniswap at launch at a price of <strong>$0.005</strong> per PLZ.
+      </p>
+
+      <h3>🔥 Deflationary Mechanics</h3>
+      <ul>
+        <li>5% of each transaction is sent to a burn wallet.</li>
+        <li>This wallet is regularly burned to reduce supply.</li>
+        <li>Every 6 months, 10% of liquidity pool tokens are burned.</li>
+      </ul>
+
+      <h3>📈 Long-Term Supply Reduction</h3>
+      <p>
+        After the first year, 10% of circulating liquidity will be burned.<br />
+        This continues every 6 months, driving scarcity and increasing value.
+      </p>
+    </div>
+  </div>
 
   <footer>
     &copy; 2025 PARADIZlight &middot; Powered by Polygon &middot; <a href="#tokenomics">Tokenomics</a>
   </footer>
 
   <script>
-    const tooltip = document.getElementById('tooltip');
-    const contractSpan = document.getElementById('copyContract');
-
-    contractSpan.addEventListener('mouseover', () => {
-      tooltip.style.visibility = 'visible';
-    });
-
-    contractSpan.addEventListener('mouseout', () => {
-      tooltip.style.visibility = 'hidden';
-    });
-
     function copyToClipboard() {
       const text = '0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0';
       navigator.clipboard.writeText(text);
+      const tooltip = document.getElementById('tooltip');
       tooltip.innerText = "Copied!";
       setTimeout(() => {
         tooltip.innerText = text;
