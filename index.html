@@ -1,39 +1,155 @@
-<section id="tokenomics" style="padding: 2rem; background: #0e0e1c; color: #e0e0f0; font-family: 'Segoe UI', sans-serif;">
-  <div style="max-width: 800px; margin: auto;">
-    <h2 style="font-size: 2rem; color: #00ffe7;">📊 Tokenomics — PARADIZlight (PLZ)</h2>
-    
-    <p style="font-size: 1rem; margin-top: 1rem;">
-      <strong>Total Supply:</strong> 100,000,000 PLZ<br>
-      <strong>Decimals:</strong> 5<br>
-      <strong>Network:</strong> Polygon (PoS)<br>
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PARADIZlight (PLZ)</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e1c;
+      color: #e0e0f0;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background-color: #0a0a1a;
+      border-bottom: 1px solid #222;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #00ffe7;
+      margin: 0;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2, h3 {
+      color: #00ffe7;
+      margin-top: 1.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #00ffe7;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .button {
+      display: inline-block;
+      background-color: #00ffe7;
+      color: #0e0e1c;
+      padding: 0.8rem 1.5rem;
+      margin-top: 1rem;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .button:hover {
+      background-color: #00ccbb;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      color: #777;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      header img {
+        margin: 0;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
 
-    <h3 style="color: #00ffe7;">🔒 Locked Supply: 35%</h3>
+  <header>
+    <img src="logo.png" alt="PARADIZlight Logo" />
+    <h1>PARADIZlight (PLZ)</h1>
+  </header>
+
+  <section id="tokenomics">
+    <h2>📊 Tokenomics</h2>
+
+    <p><strong>Total Supply:</strong> 100,000,000 PLZ<br />
+    <strong>Decimals:</strong> 5<br />
+    <strong>Network:</strong> Polygon (PoS)</p>
+
+    <h3>🔒 Locked Supply: 35%</h3>
     <p>
-      35% of the total supply will be locked for development, future updates, and long-term project sustainability.<br>
-      Locked tokens will be gradually unlocked in accordance with a multi-phase vesting schedule.
+      35% of the total supply will be locked for long-term development and sustainability. Tokens will be unlocked gradually based on a defined vesting schedule.
     </p>
 
-    <h3 style="color: #00ffe7;">💧 Uniswap Liquidity: 65%</h3>
+    <h3>💧 Uniswap Launch: 65%</h3>
     <p>
-      The remaining 65% of the supply will be added to the Uniswap liquidity pool at a starting price of <strong>$0.005 (0.5 cents)</strong> per PLZ token.<br>
-      This ensures immediate market access and decentralized trading.
+      65% of tokens will be added to Uniswap at launch at a price of <strong>$0.005</strong> per PLZ.
     </p>
 
-    <h3 style="color: #00ffe7;">🔥 Deflationary Mechanics</h3>
+    <h3>🔥 Deflationary Mechanics</h3>
     <ul>
-      <li>5% of each transaction is automatically sent to a designated burn wallet.</li>
-      <li>This wallet’s balance is burned periodically to reduce total supply and create scarcity.</li>
-      <li>Every 6 months, 10% of the remaining liquidity pool tokens will be burned to ensure long-term deflation and value increase.</li>
+      <li>5% of each transaction is sent to a burn wallet.</li>
+      <li>This wallet is regularly burned to reduce supply.</li>
+      <li>Every 6 months, 10% of liquidity pool tokens are burned.</li>
     </ul>
 
-    <h3 style="color: #00ffe7;">📈 Annual Burn Target</h3>
+    <h3>📈 Long-Term Supply Reduction</h3>
     <p>
-      After the first year of trading, <strong>10% of circulating liquidity</strong> will be permanently removed from supply. This burn process will repeat every 6 months.
+      After the first year, 10% of circulating liquidity will be burned.<br />
+      This continues every 6 months, driving scarcity and increasing value.
     </p>
 
-    <p style="margin-top: 2rem; font-style: italic;">
-      The combination of automatic burns, periodic supply reductions, and real utility aims to make PARADIZlight a truly deflationary digital asset built for the future.
+    <h3>📜 Smart Contract</h3>
+    <p>
+      Official contract on Polygon:<br />
+      <a href="https://polygonscan.com/address/0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0" target="_blank">
+        0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0
+      </a>
     </p>
-  </div>
-</section>
+
+    <h3>💱 Buy on Uniswap</h3>
+    <a
+      class="button"
+      href="https://app.uniswap.org/#/swap?outputCurrency=0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0&chain=polygon"
+      target="_blank"
+    >
+      Buy PLZ on Uniswap
+    </a>
+
+    <p style="margin-top: 2rem; font-style: italic;">
+      PARADIZlight is designed as a truly deflationary digital asset with smart economics and long-term growth vision.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 PARADIZlight &middot; Powered by Polygon &middot; <a href="#tokenomics">Tokenomics</a>
+  </footer>
+
+</body>
+</html>
