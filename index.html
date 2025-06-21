@@ -6,7 +6,6 @@
   <title>PARADIZlight (PLZ)</title>
   <link rel="icon" href="logo.png" type="image/png" />
   <style>
-    /* Reset */
     * {
       box-sizing: border-box;
     }
@@ -42,6 +41,13 @@
       font-weight: 700;
       letter-spacing: 2px;
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    }
+    header p {
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #fff;
+      font-size: 1.1rem;
     }
     section {
       max-width: 900px;
@@ -122,6 +128,7 @@
   <header>
     <img src="logo.png" alt="PARADIZlight Logo" />
     <h1>PARADIZlight (PLZ)</h1>
+    <p>Native utility token for real-world needs. <em>We think about you.</em></p>
   </header>
 
   <section id="tokenomics">
@@ -154,21 +161,56 @@
       This continues every 6 months, driving scarcity and increasing value.
     </p>
 
-    <h3>📜 Smart Contract</h3>
-    <p>
-      Official contract on Polygon:<br />
-      <a href="https://polygonscan.com/address/0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0" target="_blank">
+    <h3>⚙️ Smart Contract</h3>
+    <div style="margin-top: 0.5rem; position: relative;">
+      <span
+        id="copyContract"
+        onclick="copyToClipboard()"
+        title="Click to copy"
+        style="
+          display: inline-block;
+          background: #f2f0ff;
+          padding: 0.6rem 1rem;
+          border-radius: 8px;
+          border: 1px solid #b01eff;
+          color: #7b42f6;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        "
+      >
+        Smart Contract
+      </span>
+      <span
+        id="tooltip"
+        style="
+          visibility: hidden;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 0.5rem;
+          position: absolute;
+          z-index: 1;
+          left: 110%;
+          top: 50%;
+          transform: translateY(-50%);
+          white-space: nowrap;
+          font-size: 0.85rem;
+        "
+      >
         0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0
-      </a>
-    </p>
+      </span>
+    </div>
 
-    <h3>💱 Buy on Uniswap</h3>
     <a
       class="button"
       href="https://app.uniswap.org/#/swap?outputCurrency=0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0&chain=polygon"
       target="_blank"
-      >Buy PLZ on Uniswap</a
+      style="margin-top: 1.2rem; display: inline-block;"
     >
+      Buy on Uniswap
+    </a>
 
     <p style="margin-top: 2rem; font-style: italic; color: #555;">
       PARADIZlight is designed as a truly deflationary digital asset with smart economics and long-term growth vision.
@@ -178,6 +220,28 @@
   <footer>
     &copy; 2025 PARADIZlight &middot; Powered by Polygon &middot; <a href="#tokenomics">Tokenomics</a>
   </footer>
+
+  <script>
+    const tooltip = document.getElementById('tooltip');
+    const contractSpan = document.getElementById('copyContract');
+
+    contractSpan.addEventListener('mouseover', () => {
+      tooltip.style.visibility = 'visible';
+    });
+
+    contractSpan.addEventListener('mouseout', () => {
+      tooltip.style.visibility = 'hidden';
+    });
+
+    function copyToClipboard() {
+      const text = '0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0';
+      navigator.clipboard.writeText(text);
+      tooltip.innerText = "Copied!";
+      setTimeout(() => {
+        tooltip.innerText = text;
+      }, 1500);
+    }
+  </script>
 
 </body>
 </html>
