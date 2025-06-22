@@ -1,273 +1,38 @@
-/* 1. Сброс базовых стилей и универсальные настройки */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* 2. Тело страницы с современной типографикой и фоном */
 body {
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(135deg, #7b42f6, #1de9b6); /* градиент фирменных цветов */
-  color: #1a1a2e;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* 3. Семантические блоки с адаптивной шириной */
-header, footer {
-  background: #220046;
-  color: #e0f7fa;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(123, 66, 246, 0.7);
-}
-
-/* 4. Навигация с горизонтальным меню */
-header nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-header nav ul li a {
-  color: #e0f7fa;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-  color: #1de9b6;
-}
-
-/* 5. Контейнер с flexbox для левого и правого столбцов */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 2rem auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e0e1a;
+  color: #d8f0ff;
+  margin: 0;
   padding: 0 1rem;
-  gap: 2rem;
 }
-
-/* Левая колонка - фиксированная ширина */
-.left-column {
-  flex: 1 1 260px;
-  background: #f4f0ff;
-  border: 2px solid #1de9b6;
-  border-radius: 16px;
-  padding: 1.5rem;
-  text-align: left;
-  min-width: 260px;
-  box-shadow: 0 0 15px rgba(29, 233, 182, 0.4);
-}
-
-/* Правая колонка - занимает оставшееся пространство */
-.right-column {
-  flex: 3 1 600px;
-  background: #ffffffcc; /* немного прозрачный белый */
-  border-radius: 16px;
-  padding: 2rem 2.5rem;
-  box-shadow: 0 8px 30px rgba(123, 66, 246, 0.2);
-}
-
-/* Заголовки */
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  color: #7b42f6;
-}
-
-h1 {
-  font-weight: 900;
-  font-size: 2.6rem;
-}
-
-h2 {
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 0.7rem;
-}
-
-/* Параграфы и списки */
-p, ul {
-  font-size: 1.05rem;
-  color: #2c2c54;
-  line-height: 1.5;
-}
-
-ul {
-  padding-left: 1.5rem;
-  list-style-type: square;
-}
-
-/* 6. Кнопки с градиентом и анимацией */
-.button, .btn {
-  display: inline-block;
-  background: linear-gradient(45deg, #7b42f6, #1de9b6);
-  color: #fff;
-  padding: 14px 28px;
-  text-decoration: none;
-  border-radius: 30px;
-  margin-top: 20px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  box-shadow: 0 6px 20px rgba(29, 233, 182, 0.6);
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  user-select: none;
-  cursor: pointer;
-}
-
-.button:hover, .btn:hover {
-  background: linear-gradient(45deg, #1de9b6, #7b42f6);
-  transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(123, 66, 246, 0.8);
-}
-
-.button:active, .btn:active {
-  transform: scale(0.98);
-  box-shadow: 0 4px 15px rgba(123, 66, 246, 0.5);
-}
-
-/* 7. Блок для копирования смарт-контракта с подсказкой */
-.copy-box {
-  background: #fff;
-  border: 2px solid #7b42f6;
-  padding: 0.9rem 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 700;
-  color: #7b42f6;
-  display: inline-block;
-  position: relative;
-  margin-top: 1rem;
-  user-select: none;
-  transition: background 0.25s ease;
-}
-
-.copy-box:hover {
-  background: #7b42f6;
-  color: #fff;
-}
-
-.tooltip {
-  visibility: hidden;
-  background-color: #555;
-  color: #fff;
+header {
   text-align: center;
-  border-radius: 6px;
-  padding: 5px 8px;
-  position: absolute;
-  left: 110%;
-  top: 50%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-  font-size: 0.85rem;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  padding: 2rem 0;
 }
-
-.copy-box:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
+.subtitle {
+  color: #83ffe4;
+  font-size: 1.2rem;
 }
-
-/* 8. Поддержка мобильных устройств */
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-    padding: 0 1rem;
-  }
-  .left-column, .right-column {
-    min-width: 100%;
-  }
+h1, h2 {
+  color: #5fc6ff;
 }
-
-/* Пример мобильного меню (бургер) - базово */
-header nav {
-  position: relative;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
-
-header nav .burger {
-  display: none;
-  cursor: pointer;
-  user-select: none;
+th, td {
+  border: 1px solid #5fc6ff;
+  padding: 0.5rem;
+  text-align: center;
 }
-
-header nav .burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #e0f7fa;
-  margin: 5px 0;
-  transition: all 0.3s ease;
+section {
+  margin: 2rem 0;
 }
-
-@media (max-width: 600px) {
-  header nav ul {
-    flex-direction: column;
-    background: #220046;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    display: none;
-  }
-  header nav ul.active {
-    display: flex;
-  }
-  header nav .burger {
-    display: block;
-  }
-}
-
-/* 9. Тёмная тема (с возможностью переключения) */
-body.dark-theme {
-  background: linear-gradient(135deg, #0f0f23, #290032);
-  color: #cfcfff;
-}
-
-body.dark-theme header, body.dark-theme footer {
-  background: #1a005c;
-  color: #cfcfff;
-  box-shadow: 0 2px 10px rgba(123, 66, 246, 0.9);
-}
-
-body.dark-theme .left-column {
-  background: #2c004b;
-  border-color: #7b42f6;
-  box-shadow: 0 0 15px rgba(123, 66, 246, 0.6);
-  color: #e0e0ff;
-}
-
-body.dark-theme .right-column {
-  background: #3b005dcc;
-  color: #d1caff;
-}
-
-body.dark-theme .button, body.dark-theme .btn {
-  box-shadow: 0 6px 20px rgba(123, 66, 246, 0.9);
-}
-
-body.dark-theme .button:hover, body.dark-theme .btn:hover {
-  box-shadow: 0 8px 30px rgba(29, 233, 182, 0.9);
-}
-
-body.dark-theme a {
-  color: #b7aaff;
-}
-
-body.dark-theme a:hover {
-  color: #1de9b6;
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #222;
 }
