@@ -2,251 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PARADIZlight (PLZ)</title>
-  <link rel="icon" href="logo.png" type="image/png" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
-      color: #1a1a2e;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
-      background: linear-gradient(90deg, #7b42f6, #b01eff);
-      box-shadow: 0 2px 8px rgba(183, 30, 255, 0.5);
-      color: white;
-    }
-    header img {
-      height: 70px;
-      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9));
-    }
-    header h1 {
-      font-size: 2.2rem;
-      margin: 1rem 0 0.5rem;
-      font-weight: 700;
-    }
-    header p {
-      margin: 0.3rem 0;
-      font-size: 1.2rem;
-    }
-    header .slogan {
-      font-size: 1.6rem;
-      font-weight: bold;
-      margin-top: 0.8rem;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 1rem;
-      gap: 2rem;
-    }
-
-    .left-column {
-      flex: 1 1 260px;
-      background: #f4f0ff;
-      border: 1px solid #b01eff33;
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: left;
-      min-width: 250px;
-    }
-
-    .left-column h3 {
-      color: #7b42f6;
-    }
-
-    .right-column {
-      flex: 3 1 600px;
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 8px 25px rgba(123, 66, 246, 0.12);
-    }
-
-    h2, h3 {
-      color: #7b42f6;
-      margin-top: 1.5rem;
-    }
-
-    p, ul {
-      font-size: 1rem;
-      color: #2c2c54;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-      list-style-type: square;
-    }
-
-    a {
-      color: #b01eff;
-      text-decoration: none;
-      font-weight: 600;
-      word-break: break-word;
-    }
-
-    a:hover {
-      color: #7b42f6;
-      text-decoration: underline;
-    }
-
-    .button {
-      display: inline-block;
-      background: linear-gradient(90deg, #b01eff, #7b42f6);
-      color: white;
-      padding: 0.7rem 1.4rem;
-      margin-top: 1rem;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(183, 30, 255, 0.3);
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background: linear-gradient(90deg, #7b42f6, #b01eff);
-    }
-
-    .copy-box {
-      background: #fff;
-      border: 1px solid #b01eff;
-      padding: 0.7rem 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #7b42f6;
-      display: inline-block;
-      position: relative;
-      margin-top: 0.5rem;
-    }
-
-    .tooltip {
-      visibility: hidden;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 5px 8px;
-      position: absolute;
-      left: 110%;
-      top: 50%;
-      transform: translateY(-50%);
-      white-space: nowrap;
-      font-size: 0.85rem;
-      z-index: 1;
-    }
-
-    .copy-box:hover .tooltip {
-      visibility: visible;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      color: #666;
-      margin-top: auto;
-      background: #fafafa;
-      box-shadow: inset 0 1px 0 #ddd;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-      .right-column {
-        padding: 1rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PLZ Tokenomics | Paradizlight</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
   <header>
-    <img src="logo.png" alt="PARADIZlight Logo" />
-    <h1>PARADIZlight (PLZ)</h1>
-    <p>Native utility token for real-world needs.</p>
-    <p class="slogan">We think about you.</p>
+    <h1>🌟 Paradizlight (PLZ) Tokenomics</h1>
+    <p class="subtitle">Powering the NFC Wallet of the Future</p>
   </header>
 
-  <div class="container">
-    <div class="left-column">
-      <a class="button" href="whitepaper.html" target="_blank">Whitepaper</a>
-
-      <h3>Smart Contract</h3>
-      <div class="copy-box" onclick="copyToClipboard()" title="Click to copy">
-        Smart Contract
-        <span class="tooltip" id="tooltip">0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0</span>
-      </div>
-
-      <a
-        class="button"
-        href="https://app.uniswap.org/#/swap?outputCurrency=0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0&chain=polygon"
-        target="_blank"
-      >
-        Buy on Uniswap
-      </a>
-    </div>
-
-    <div class="right-column">
-      <h2>📊 Tokenomics</h2>
-      <p><strong>Total Supply:</strong> 100,000,000 PLZ<br />
-         <strong>Decimals:</strong> 5<br />
-         <strong>Network:</strong> Polygon (PoS)</p>
-
-      <h3>🔒 Locked Supply: 35%</h3>
-      <p>
-        35% of the total supply will be locked for long-term development and sustainability. Tokens will be unlocked gradually based on a defined vesting schedule.
-      </p>
-
-      <h3>💧 Uniswap Launch: 65%</h3>
-      <p>
-        65% of tokens will be added to Uniswap at launch at a price of <strong>$0.05</strong> per PLZ.
-      </p>
-
-      <h3>🔥 Deflationary Mechanics</h3>
+  <main>
+    <section>
+      <h2>🔢 Общая информация</h2>
       <ul>
-        <li>5% of each transaction is sent to a burn wallet.</li>
-        <li>This wallet is regularly burned to reduce supply.</li>
-        <li>Every 6 months, 10% of liquidity pool tokens are burned.</li>
+        <li><strong>Название:</strong> Paradizlight (PLZ)</li>
+        <li><strong>Общая эмиссия:</strong> 100,000,000 PLZ</li>
+        <li><strong>Десятичные знаки:</strong> 5</li>
+        <li><strong>Сеть:</strong> Polygon (EVM)</li>
       </ul>
+    </section>
 
-      <h3>📈 Long-Term Supply Reduction</h3>
-      <p>
-        After the first year, 10% of circulating liquidity will be burned.<br />
-        This continues every 6 months, driving scarcity and increasing value.
-      </p>
-    </div>
-  </div>
+    <section>
+      <h2>📊 Распределение токенов</h2>
+      <table>
+        <thead>
+          <tr><th>Категория</th><th>Процент</th><th>Кол-во токенов</th><th>Назначение</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🔒 Заморозка</td><td>35%</td><td>35,000,000</td><td>Стабильность, DAO</td></tr>
+          <tr><td>💳 Операции и кэшбэк</td><td>20%</td><td>20,000,000</td><td>Бонусы, airdrop, возвраты</td></tr>
+          <tr><td>🛠 Развитие</td><td>15%</td><td>15,000,000</td><td>Разработка, партнёрства</td></tr>
+          <tr><td>🎁 Награды</td><td>10%</td><td>10,000,000</td><td>NFT, геймификация</td></tr>
+          <tr><td>🫂 Благотворительность</td><td>10%</td><td>10,000,000</td><td>Прямая помощь</td></tr>
+          <tr><td>🌐 Ликвидность</td><td>10%</td><td>10,000,000</td><td>Uniswap, торговля</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>🔥 Механизмы использования PLZ</h2>
+      <ul>
+        <li>💳 Все NFC-платежи — по умолчанию в PLZ</li>
+        <li>💰 Кэшбэк до 3% в PLZ за транзакции</li>
+        <li>🔥 Автоматическое сжигание 1% при каждой оплате</li>
+        <li>🎮 NFT-награды и уровень активности</li>
+        <li>🗳 DAO-голосование: 1 PLZ = 1 голос</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📈 Ценовая стратегия</h2>
+      <p>Начальная цена: <strong>$0.05</strong>. Дальнейшее повышение стоимости обеспечивается через:</p>
+      <ul>
+        <li>🔥 Постоянное сжигание токенов</li>
+        <li>🧩 Геймифицированный спрос внутри кошелька</li>
+        <li>🔒 Заморозка части эмиссии</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔎 Прозрачность</h2>
+      <ul>
+        <li>📜 Все данные о распределении — на смарт-контракте</li>
+        <li>📊 График сожжённых токенов — в приложении</li>
+        <li>🔗 Прямой доступ к контракту PLZ</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 PARADIZlight &middot; Powered by Polygon &middot; <a href="whitepaper.html">Whitepaper</a>
+    <p>&copy; 2025 Paradizlight • We think about you</p>
   </footer>
-
-  <script>
-    function copyToClipboard() {
-      const text = '0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0';
-      navigator.clipboard.writeText(text);
-      const tooltip = document.getElementById('tooltip');
-      tooltip.innerText = "Copied!";
-      setTimeout(() => {
-        tooltip.innerText = text;
-      }, 1500);
-    }
-  </script>
-
 </body>
 </html>
