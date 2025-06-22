@@ -2,79 +2,288 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PLZ Tokenomics | Paradizlight Wallet</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PARADIZlight (PLZ)</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #1a1a2e;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      background: linear-gradient(90deg, #7b42f6, #b01eff);
+      box-shadow: 0 2px 8px rgba(183, 30, 255, 0.5);
+      color: white;
+    }
+    header img {
+      height: 70px;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9));
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin: 1rem 0 0.5rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.3rem 0;
+      font-size: 1.2rem;
+    }
+    header .slogan {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 0.8rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    .left-column {
+      flex: 1 1 260px;
+      background: #f4f0ff;
+      border: 1px solid #b01eff33;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: left;
+      min-width: 250px;
+    }
+
+    .left-column h3 {
+      color: #7b42f6;
+    }
+
+    .right-column {
+      flex: 3 1 600px;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 25px rgba(123, 66, 246, 0.12);
+    }
+
+    h2, h3 {
+      color: #7b42f6;
+      margin-top: 1.5rem;
+    }
+
+    p, ul {
+      font-size: 1rem;
+      color: #2c2c54;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      list-style-type: square;
+    }
+
+    a {
+      color: #b01eff;
+      text-decoration: none;
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    a:hover {
+      color: #7b42f6;
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(90deg, #b01eff, #7b42f6);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      margin-top: 1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(183, 30, 255, 0.3);
+      transition: background 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .button:hover {
+      background: linear-gradient(90deg, #7b42f6, #b01eff);
+    }
+
+    .copy-box {
+      background: #fff;
+      border: 1px solid #b01eff;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #7b42f6;
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+      user-select: all;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 8px;
+      position: absolute;
+      left: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+      font-size: 0.85rem;
+      z-index: 1;
+    }
+
+    .copy-box:hover .tooltip {
+      visibility: visible;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      color: #666;
+      margin-top: auto;
+      background: #fafafa;
+      box-shadow: inset 0 1px 0 #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .right-column {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>🌟 Paradizlight (PLZ) Tokenomics 🎯</h1>
-    <p class="subtitle">The core token of the NFC EVM Wallet revolution</p>
+    <img src="logo.png" alt="PARADIZlight Logo" />
+    <h1>PARADIZlight (PLZ)</h1>
+    <p>Native utility token for real-world needs.</p>
+    <p class="slogan">We think about you.</p>
   </header>
 
-  <main>
-    <section>
-      <h2>🔢 General Information</h2>
-      <ul>
-        <li><strong>Name:</strong> Paradizlight (PLZ)</li>
-        <li><strong>Total Supply:</strong> 100,000,000 PLZ</li>
-        <li><strong>Decimals:</strong> 5</li>
-        <li><strong>Blockchain:</strong> Polygon (EVM-compatible)</li>
-      </ul>
-    </section>
+  <div class="container">
+    <div class="left-column">
+      <a class="button" href="whitepaper.html" target="_blank" rel="noopener">Whitepaper</a>
 
-    <section>
-      <h2>📊 Token Distribution</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Category</th><th>Share</th><th>Amount</th><th>Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>🔒 Frozen (DAO Reserve)</td><td>35%</td><td>35,000,000</td><td>Governance, ecosystem stability</td></tr>
-          <tr><td>💳 Operations & Cashback</td><td>20%</td><td>20,000,000</td><td>Rewards, airdrops, in-app use</td></tr>
-          <tr><td>🛠 Development Fund</td><td>15%</td><td>15,000,000</td><td>Infrastructure, integrations</td></tr>
-          <tr><td>🎁 Rewards & Gamification</td><td>10%</td><td>10,000,000</td><td>NFTs, activity incentives</td></tr>
-          <tr><td>🫂 Charity & Aid</td><td>10%</td><td>10,000,000</td><td>Social good initiatives</td></tr>
-          <tr><td>🌐 Liquidity Pool</td><td>10%</td><td>10,000,000</td><td>DEX/Uniswap liquidity</td></tr>
-        </tbody>
-      </table>
-    </section>
+      <h3>Smart Contract</h3>
+      <div class="copy-box" onclick="copyToClipboard()" title="Click to copy">
+        0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0
+        <span class="tooltip" id="tooltip">Click to copy</span>
+      </div>
 
-    <section>
-      <h2>🔥 Utility & Integration</h2>
-      <ul>
-        <li>💳 PLZ is the default currency for NFC payments</li>
-        <li>💰 Up to 3% cashback in PLZ per transaction</li>
-        <li>🔥 1% of every PLZ transaction is burned</li>
-        <li>🎮 Earn NFTs for using PLZ inside the app</li>
-        <li>🗳 DAO voting rights: 1 PLZ = 1 vote</li>
-      </ul>
-    </section>
+      <a
+        class="button"
+        href="https://app.uniswap.org/#/swap?outputCurrency=0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0&chain=polygon"
+        target="_blank" rel="noopener"
+      >
+        Buy on Uniswap
+      </a>
+    </div>
 
-    <section>
-      <h2>📈 Value Strategy</h2>
-      <p>Initial price: <strong>$0.05</strong>. Value will grow through:</p>
-      <ul>
-        <li>🔥 Continuous token burning</li>
-        <li>🎯 Utility-driven demand in-app</li>
-        <li>🔒 35% frozen for long-term governance</li>
-      </ul>
-    </section>
+    <div class="right-column">
+      <h2>📊 Tokenomics</h2>
+      <p><strong>Total Supply:</strong> 100,000,000 PLZ<br />
+         <strong>Decimals:</strong> 5<br />
+         <strong>Network:</strong> Polygon (PoS)</p>
 
-    <section>
-      <h2>🔎 Transparency</h2>
+      <h3>🔒 Frozen (DAO Reserve): 35%</h3>
+      <p>
+        35% of the total supply is locked for long-term governance and ecosystem stability. Tokens will be gradually unlocked per vesting schedule.
+      </p>
+
+      <h3>💳 Operations & Cashback Fund: 20%</h3>
+      <p>
+        Used for rewards, cashback bonuses, airdrops, and supporting in-app transactions to stimulate active usage.
+      </p>
+
+      <h3>🛠 Development Fund: 15%</h3>
+      <p>
+        Dedicated to ongoing development, integrations, partnerships, and platform growth.
+      </p>
+
+      <h3>🎁 Rewards & Gamification: 10%</h3>
+      <p>
+        Tokens allocated for NFT rewards, achievements, and gamified user engagement.
+      </p>
+
+      <h3>🫂 Charity & Aid: 10%</h3>
+      <p>
+        Funds set aside for social good initiatives and charitable contributions via the platform.
+      </p>
+
+      <h3>🌐 Liquidity Pool: 10%</h3>
+      <p>
+        Initial liquidity on decentralized exchanges like Uniswap to ensure trading availability.
+      </p>
+
+      <h3>🔥 Utility & Integration</h3>
       <ul>
-        <li>📜 All data stored on-chain via smart contract</li>
-        <li>📊 Burn tracker available in-app</li>
-        <li>🔗 PLZ contract linked directly from the wallet</li>
+        <li>💳 PLZ is the default token for NFC payments within the wallet.</li>
+        <li>💰 Users receive up to 3% cashback in PLZ for transactions.</li>
+        <li>🔥 1% of every PLZ transaction is automatically burned, reducing supply and increasing scarcity.</li>
+        <li>🎮 Earn NFTs and other rewards for active usage and participation.</li>
+        <li>🗳 PLZ holders can participate in DAO governance: 1 PLZ = 1 vote.</li>
       </ul>
-    </section>
-  </main>
+
+      <h3>📈 Value Growth Strategy</h3>
+      <p>
+        The initial token price is set at <strong>$0.05</strong>. The price is expected to grow due to:
+      </p>
+      <ul>
+        <li>🔥 Continuous token burning mechanisms.</li>
+        <li>🎯 Increasing demand driven by in-app utility and gamification.</li>
+        <li>🔒 A significant portion (35%) locked in DAO reserve to maintain ecosystem stability.</li>
+      </ul>
+
+      <h3>🔎 Transparency</h3>
+      <ul>
+        <li>📜 All token data and transactions are stored transparently on-chain.</li>
+        <li>📊 Users can track burn statistics and token supply within the wallet app.</li>
+        <li>🔗 Direct access to the PLZ smart contract from the wallet interface.</li>
+      </ul>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Paradizlight • “We pay for you — We think about you”</p>
+    &copy; 2025 PARADIZlight &middot; Powered by Polygon &middot; <a href="whitepaper.html">Whitepaper</a>
   </footer>
+
+  <script>
+    function copyToClipboard() {
+      const text = '0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0';
+      navigator.clipboard.writeText(text).then(() => {
+        const tooltip = document.getElementById('tooltip');
+        tooltip.innerText = "Copied!";
+        setTimeout(() => {
+          tooltip.innerText = "Click to copy";
+        }, 1500);
+      });
+    }
+  </script>
+
 </body>
 </html>
