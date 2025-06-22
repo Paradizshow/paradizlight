@@ -279,6 +279,11 @@
     &copy; 2025 PARADIZlight &middot; Powered by Polygon &middot; <a href="whitepaper.html">Whitepaper</a>
   </footer>
 
+  <!-- Visitor counter -->
+  <div id="visitor-counter" style="font-size: 0.75rem; color: #999; text-align: center; margin: 0.5rem 0;">
+    Visitors count: 0
+  </div>
+
   <script>
     function copyToClipboard() {
       const text = '0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0';
@@ -290,6 +295,17 @@
         }, 1500);
       });
     }
+
+    (function() {
+      const counterEl = document.getElementById('visitor-counter');
+      let visits = localStorage.getItem('paradizlight_visits');
+      if (!visits) {
+        visits = 0;
+      }
+      visits = parseInt(visits) + 1;
+      localStorage.setItem('paradizlight_visits', visits);
+      counterEl.textContent = `Visitors count: ${visits}`;
+    })();
   </script>
 
 </body>
