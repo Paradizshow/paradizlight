@@ -3,18 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PARADIZlight Whitepaper</title>
+  <title>PARADIZlight (PLZ) Whitepaper</title>
+  <link rel="icon" href="logo.png" type="image/png" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 2rem;
-      background: #ffffff;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #f8f9fb;
       color: #1a1a2e;
+      line-height: 1.6;
     }
     h1, h2, h3 {
       color: #7b42f6;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.2rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #b01eff;
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.7rem;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #2c2c54;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2c2c54;
     }
     a {
       color: #b01eff;
@@ -23,106 +55,86 @@
     a:hover {
       text-decoration: underline;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-    }
-    .section {
-      margin-top: 2rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
     footer {
-      margin-top: 4rem;
       text-align: center;
-      color: #777;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>PARADIZlight (PLZ) — Whitepaper</h1>
-    <p><strong>Version:</strong> 1.0<br><strong>Date:</strong> June 2025</p>
 
-    <div class="section">
-      <h2>Abstract</h2>
-      <p>PARADIZlight (PLZ) is a deflationary ERC-20 token on the Polygon network, designed as a native token for mobile applications focused on serving everyday people. <em>We think about you.</em></p>
-    </div>
+  <h1>PARADIZlight (PLZ) Whitepaper</h1>
+  <p><em>Native utility token for real-world needs — "We think about you."</em></p>
 
-    <div class="section">
-      <h2>Mission & Vision</h2>
-      <h3>Mission</h3>
-      <p>To provide a reliable, fair, and accessible digital asset that powers real-world applications for the benefit of the community.</p>
-      <h3>Vision</h3>
-      <p>We aim to build an ecosystem where technology serves people, with transparent tokenomics and sustainable growth mechanisms.</p>
-    </div>
+  <h2>1. Introduction</h2>
+  <p>PARADIZlight (PLZ) is a deflationary utility token built on the Polygon (PoS) blockchain, designed to power a cutting-edge wallet application integrating NFC payments, EVM-compatible token transfers, and a vibrant ecosystem of rewards and social impact. PLZ aims to combine seamless usability with community governance and real-world value.</p>
 
-    <div class="section">
-      <h2>Technical Details</h2>
-      <ul>
-        <li><strong>Ticker:</strong> PLZ</li>
-        <li><strong>Network:</strong> Polygon (PoS)</li>
-        <li><strong>Standard:</strong> ERC-20</li>
-        <li><strong>Total Supply:</strong> 100,000,000 PLZ</li>
-        <li><strong>Decimals:</strong> 5</li>
-        <li><strong>Smart Contract:</strong> <a href="https://polygonscan.com/address/0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0" target="_blank">0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0</a></li>
-        <li><strong>Public Listing:</strong> <a href="https://app.uniswap.org/#/swap?outputCurrency=0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0&chain=polygon" target="_blank">Uniswap</a></li>
-      </ul>
-    </div>
+  <h2>2. Vision & Mission</h2>
+  <p>Our mission is to create a token that is deeply integrated into daily digital transactions, fostering user engagement through cashback rewards, gamification, and charitable contributions. We prioritize transparency, security, and sustainability to build trust and drive adoption.</p>
 
-    <div class="section">
-      <h2>Tokenomics</h2>
-      <p><strong>Total Supply:</strong> 100,000,000 PLZ</p>
-      <ul>
-        <li>🔒 35% Locked for development and sustainability</li>
-        <li>💧 65% Added to Uniswap at $0.005 per PLZ</li>
-      </ul>
-      <h3>Deflationary Mechanics</h3>
-      <ul>
-        <li>5% of every transaction is burned</li>
-        <li>Burn wallet is manually reduced</li>
-        <li>Every 6 months, 10% of liquidity is burned</li>
-      </ul>
-    </div>
+  <h2>3. Tokenomics</h2>
 
-    <div class="section">
-      <h2>Token Use</h2>
-      <p>PLZ will be used as the native token in our mobile app ecosystem, for features such as:</p>
-      <ul>
-        <li>Paying for services</li>
-        <li>In-app benefits and rewards</li>
-        <li>Peer-to-peer transfers</li>
-        <li>Governance participation</li>
-      </ul>
-    </div>
+  <h3>Total Supply and Decimals</h3>
+  <p>The total supply of PLZ is fixed at <strong>100,000,000</strong> tokens, with <strong>5 decimals</strong> for fine granularity.</p>
 
-    <div class="section">
-      <h2>Roadmap</h2>
-      <ul>
-        <li><strong>Q2 2025:</strong> Smart contract & verification</li>
-        <li><strong>Q3 2025:</strong> Launch website & Uniswap listing</li>
-        <li><strong>Q4 2025:</strong> Mobile app MVP with PLZ integration</li>
-        <li><strong>Q1 2026:</strong> Community airdrop & engagement</li>
-        <li><strong>Q2 2026:</strong> NFT integration</li>
-        <li><strong>Q3–Q4 2026:</strong> CEX listings & app expansion</li>
-      </ul>
-    </div>
+  <h3>Token Distribution</h3>
+  <ul>
+    <li><strong>35% — Frozen (DAO Reserve):</strong> Locked for long-term governance, ecosystem stability, and sustainability, with gradual unlocking per vesting schedule.</li>
+    <li><strong>20% — Operations & Cashback Fund:</strong> Used for rewarding users, cashback bonuses, airdrops, and supporting in-app transactions to stimulate active usage.</li>
+    <li><strong>15% — Development Fund:</strong> Dedicated to ongoing development, partnerships, integrations, and platform growth.</li>
+    <li><strong>10% — Rewards & Gamification:</strong> Allocated for NFT rewards, achievements, and gamified user engagement.</li>
+    <li><strong>10% — Charity & Aid:</strong> Set aside for social good initiatives and charitable contributions via the platform.</li>
+    <li><strong>10% — Liquidity Pool:</strong> Initial liquidity on decentralized exchanges like SushiSwap to ensure smooth trading.</li>
+  </ul>
 
-    <div class="section">
-      <h2>Community & Governance</h2>
-      <p>Holders can vote, propose updates, and participate in the development of the PARADIZlight ecosystem.</p>
-    </div>
+  <h3>Deflationary Mechanisms</h3>
+  <ul>
+    <li><strong>1% Burn on Every Transaction:</strong> Automatically reduces circulating supply, increasing scarcity over time.</li>
+    <li><strong>Scheduled Burns:</strong> Periodic burning of liquidity pool tokens and tokens from burn wallets to maintain deflationary pressure.</li>
+  </ul>
 
-    <div class="section">
-      <h2>Security & Transparency</h2>
-      <p>The smart contract is open-source, verified on PolygonScan, and will be audited before app launch.</p>
-    </div>
+  <h2>4. Utility & Ecosystem</h2>
+  <ul>
+    <li><strong>NFC Payments:</strong> PLZ is the default token for NFC payments within the PARADIZlight wallet.</li>
+    <li><strong>Cashback Rewards:</strong> Users earn up to 3% cashback in PLZ for using the wallet and transacting with the token.</li>
+    <li><strong>Gamification:</strong> Earn NFTs, badges, and other rewards for active participation and engagement.</li>
+    <li><strong>DAO Governance:</strong> PLZ holders can vote on platform proposals and participate in community governance — 1 PLZ equals 1 vote.</li>
+    <li><strong>Charitable Giving:</strong> The platform integrates charity features, allowing users to contribute to social causes with PLZ tokens.</li>
+  </ul>
 
-    <footer>
-      &copy; 2025 PARADIZlight — <a href="https://paradizshow.github.io/paradizlight/">https://paradizshow.github.io/paradizlight/</a>
-    </footer>
-  </div>
+  <h2>5. Price & Growth Strategy</h2>
+  <p>The initial price per PLZ token is set at <strong>$0.05</strong>. We anticipate value growth driven by:</p>
+  <ul>
+    <li>Ongoing deflationary burning mechanisms.</li>
+    <li>Growing demand from in-app usage, rewards, and cashback incentives.</li>
+    <li>Locked DAO reserves ensuring supply stability and governance participation.</li>
+    <li>Increasing community adoption and ecosystem expansion.</li>
+  </ul>
+
+  <h2>6. Transparency & Security</h2>
+  <p>All transactions and token data are recorded on-chain via Polygon, accessible and auditable by all users. The smart contract address and burn statistics are openly shared, fostering trust and confidence.</p>
+
+  <h2>7. Roadmap</h2>
+  <ul>
+    <li><strong>Q2 2025:</strong> Token launch and wallet app release with NFC payment integration.</li>
+    <li><strong>Q3 2025:</strong> Gamification features, NFT rewards, and DAO governance launch.</li>
+    <li><strong>Q4 2025:</strong> Charity platform integration and additional partnerships.</li>
+    <li><strong>2026 and beyond:</strong> Continued ecosystem growth, multi-chain support, and expansion of token utility.</li>
+  </ul>
+
+  <h2>8. Team & Community</h2>
+  <p>PARADIZlight is developed by a dedicated team passionate about blockchain, social impact, and innovative finance. We believe in open community collaboration and invite holders to join us on this journey.</p>
+
+  <h2>9. Contact & Links</h2>
+  <p>Official website: <a href="https://paradizshow.github.io/paradizlight/" target="_blank" rel="noopener">https://paradizshow.github.io/paradizlight/</a></p>
+  <p>Smart Contract Address: <code>0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0</code></p>
+
+  <footer>
+    &copy; 2025 PARADIZlight. All rights reserved.
+  </footer>
 </body>
 </html>
