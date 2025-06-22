@@ -1,6 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e1a;
+  background: #0e0e1a;
   color: #d8f0ff;
   margin: 0;
   padding: 0 1rem;
@@ -16,18 +16,30 @@ header {
 h1, h2 {
   color: #5fc6ff;
 }
-table {
+main section {
+  margin: 2rem 0;
+}
+ul, table {
   width: 100%;
+}
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+ul li {
+  margin: 0.5rem 0;
+}
+table {
   border-collapse: collapse;
   margin-top: 1rem;
 }
 th, td {
   border: 1px solid #5fc6ff;
-  padding: 0.5rem;
+  padding: 0.6rem;
   text-align: center;
 }
-section {
-  margin: 2rem 0;
+thead {
+  background-color: rgba(95, 198, 255, 0.2);
 }
 footer {
   text-align: center;
