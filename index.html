@@ -133,7 +133,7 @@
       display: inline-block;
       position: relative;
       margin-top: 0.5rem;
-      user-select: all;
+      user-select: none;
     }
 
     .tooltip {
@@ -150,6 +150,8 @@
       white-space: nowrap;
       font-size: 0.85rem;
       z-index: 1;
+      transition: visibility 0.2s ease-in-out;
+      pointer-events: none;
     }
 
     .copy-box:hover .tooltip {
@@ -190,9 +192,14 @@
       <a class="button" href="whitepaper.html" target="_blank" rel="noopener">Whitepaper</a>
 
       <h3>Smart Contract</h3>
-      <div class="copy-box" onclick="copyToClipboard()" title="Click to copy">
-        0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0
-        <span class="tooltip" id="tooltip">Click to copy</span>
+      <div class="copy-box" 
+           role="button" 
+           tabindex="0" 
+           aria-label="Copy smart contract address" 
+           onclick="copyToClipboard()" 
+           onkeydown="if(event.key==='Enter' || event.key===' ') { event.preventDefault(); copyToClipboard(); }">
+        Smart Contract
+        <span class="tooltip" id="tooltip">0x194cacdF619333a3fF2A100D3BBeA7AF44fe0DC0</span>
       </div>
 
       <a
@@ -279,7 +286,7 @@
         const tooltip = document.getElementById('tooltip');
         tooltip.innerText = "Copied!";
         setTimeout(() => {
-          tooltip.innerText = "Click to copy";
+          tooltip.innerText = text;
         }, 1500);
       });
     }
